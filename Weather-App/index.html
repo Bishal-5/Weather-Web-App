@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="Image/title_logo.webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Main Body -->
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <!-- Location Search Form -->
+        <form id="weatherForm">
+            <input type="text" id="locationInput" placeholder="Enter location">
+            <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+            <button type="reset" class="fa-solid fa-x"></button>
+        </form>
+
+        <!-- Error Message -->
+        <div id="error-photo" style="display: none;">
+            <img src="Image/DNF.jpg" style="height: 4cm;margin: 16px 0 -23px 0;">
+            <h2 style="color: red;" id="err-msg">City Not Found!</h2>
+        </div>
+
+        <!-- Weather Result -->
+        <div id="weatherResults">
+            <div class="photo">
+                <img src="" alt="" id="weather-img">
+            </div>
+
+            <h2 class="location" id="location" style="color: blue;margin-bottom: 11px"></h2>
+            <i class="fa-solid fa-temperature-quarter" style="font-size: 26px;"></i>
+            <p class="temp" id="temperature" style="font-size: 23px;font-weight: bolder">
+            <p>
+            <p class="description" id="description"
+                style="font-size: 21px;font-weight: 700;text-transform: capitalize;"></p>
+        </div>
+
+        <!-- Humidity & Wind -->
+        <div id="moreInfo">
+
+            <div class="humidity">
+                <i class="fa-sharp fa-solid fa-droplet" style="font-size: 28px;padding: 11px;"></i><br>
+                <div class="text">
+                    <span id="humidity" style="font-size: x-large;"></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class="fa-solid fa-wind" style="font-size: 28px;padding: 11px;"></i>
+                <div class="text">
+                    <span id="wind" style="font-size: x-large;"></span>
+                    <p>Wind</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
